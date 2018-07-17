@@ -2,4 +2,4 @@ The file TictacToe.rb is working fine however it doesn't meet the requirements o
 
 The files in the lib folder correspond to a try divided into different classes.
 
-@ Moussaillon Antoine Litaise
+@ Moussaillon Antoine Litaise && Ahmed Bouziid
