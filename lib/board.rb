@@ -1,29 +1,4 @@
-require_relative 'player.rb'
-require_relative 'board.rb'
-
-class BoardCase
-
-    #la classe a 2 attr_accessor, sa valeur (X, O, ou vide), ainsi que son numéro de case)
-    attr_accessor :valeur
-    attr_accessor :num_case
-  
-  def initialize (num_case=" ", valeur=" ")
-    #doit régler sa valeur, ainsi que son numéro de case
-    @num_case = num_case
-    @valeur = valeur
-
-  end
-  
-  def to_string
-    #TO DO : doit renvoyer la valeur au format string
-    @num_case = @num_case.to_s
-    @valeur = @valeur.to_s
-  end
-
-end
-
-
-
+require_relative 'board_case.rb'
 
 
 class Board
@@ -129,58 +104,3 @@ class Board
       end
   end
 end
-
-
-
-
-
-
-
-class Player
-  #TO DO : la classe a 2 attr_accessor, son nom, sa valeur (X ou O). Elle a un attr_writer : il a gagné ?
-    attr_accessor :names
-    attr_accessor :valeur
-    attr_writer :win
-
-  
-  def initialize (names,valeur,win=false)
-    @names = names
-    @valeur = valeur
-    @win
-  end
-
-end
-
-
-
-class Game
-  def initialize
-
-    puts "Bienvenue dans mon jeu Tic Tac Toe!"
-
-    puts "JOUEUR 1, veuillez entrer votre blaz:"
-    @player_name1 = gets.chomp.to_s
-    @joueur1=Player.new(@player_name1,"X")
-
-    puts "JOUEUR 2, veuillez entrer votre blaz:"
-    @player_name2 = gets.chomp.to_s
-    @joueur2=Player.new(@player_name2,"O")
-
-    go
-
-  end
-
-  def go
-    Board.new
-    turn
-  end
-
-  def turn
-    #TO DO : affiche le plateau, demande au joueur il joue quoi, vérifie si un joueur a gagné, passe au joueur suivant si la partie n'est pas finie
-  end
-    
-                        
-
-end
-
-Game.new
